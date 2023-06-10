@@ -53,23 +53,21 @@ function WeatherData({ data }) {
 
 	return (
 		<div className="app">
-			{/* SearchLocation Component */}
-
 			<div className="container">
 				{/* Left Weather Data */}
-				{data.main ? (
+				{data.name ? (
 					<div className="main-data">
 						<div className="location">
-							{data.name ? <h2>{data.name}</h2> : null}
+							<h2>{data.name}</h2>
 						</div>
 						<div className="date">
-							{data.name ? <p>{currentDate}</p> : null}
+							<p>{currentDate}</p>
 						</div>
 						<div className="description">
-							{data.weather ? <p>{data.weather[0].main}</p> : null}
+							<p>{data.weather[0].main}</p>
 						</div>
 						<div className="temp">
-							{data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+							<h1>{data.main.temp.toFixed()}°F</h1>
 						</div>
 					</div>
 				) : null}
@@ -86,19 +84,19 @@ function WeatherData({ data }) {
 				</div>
 
 				{/* Right Weather Data */}
-				{data.main ? (
+				{data.name ? (
 					<div className="extra-data">
 						<div className="feels">
-							{data.main ? <h3>Feels Like</h3> : null}
-							{data.main ? <p>{data.main.feels_like.toFixed()}°F</p> : null}
+							<h3>Feels Like</h3>
+							<p>{data.main.feels_like.toFixed()}°F</p>
 						</div>
 						<div className="humidity">
-							{data.main ? <h3>Humidity</h3> : null}
-							{data.main ? <p>{data.main.humidity}%</p> : null}
+							<h3>Humidity</h3>
+							<p>{data.main.humidity}%</p>
 						</div>
 						<div className="wind">
-							{data.wind ? <h3>Wind Speed</h3> : null}
-							{data.wind ? <p>{data.wind.speed.toFixed()} mph</p> : null}
+							<h3>Wind Speed</h3>
+							<p>{data.wind.speed.toFixed()} mph</p>
 						</div>
 					</div>
 				) : null}
