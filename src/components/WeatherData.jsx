@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Thunderstorm from '../assets/icons/thunder.svg'
 import Drizzle from '../assets/icons/rainy-4.svg'
 import Rain from '../assets/icons/rainy-6.svg'
